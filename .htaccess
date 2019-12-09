@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteRule ^Thông-Báo$ khien.php [L]
+RewriteRule ^Trang-Chu$ index.php [L]
+RewriteRule ^Trang-Chu.html$ token3.php [L]
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
